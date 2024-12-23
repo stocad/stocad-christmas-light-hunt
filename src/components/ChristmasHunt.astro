@@ -2,54 +2,46 @@
 import { getImage } from 'astro:assets';
 
   const items = [
-    { name: "Candy Cane", imageName: "test.png" },
-    { name: "Star", imageName: "test.png" },
-    { name: "Rudolph", imageName: "test.png" },
-    { name: "Polar Bear", imageName: "test.png" },
-    { name: "Wreath", imageName: "test.png" },
-    { name: "Penguin", imageName: "test.png" },
-    { name: "Sleigh", imageName: "test.png" },
-    { name: "Icicle Lights", imageName: "test.png" },
-    { name: "Santa Claus", imageName: "test.png" },
-    { name: "Snowman", imageName: "test.png" },
-    { name: "Grinch", imageName: "test.png" },
-    { name: "Train", imageName: "test.png" },
-    { name: "Angel", imageName: "test.png" },
-    { name: "Gingerbread Man", imageName: "test.png" },
-    { name: "Snow Globe", imageName: "test.png" },
-    { name: "Mrs. Claus", imageName: "test.png" },
-    { name: "Elf", imageName: "test.png" },
-    { name: "Toy Soldier", imageName: "test.png" },
-    { name: "Nativity Scene", imageName: "test.png" },
-    { name: "Present Box", imageName: "test.png" },
-    { name: "White Lights", imageName: "test.png" },
-    { name: "Colorful Lights", imageName: "test.png" },
-    { name: "North Pole Sign", imageName: "test.png" },
-    { name: "Bell", imageName: "test.png" },
-    { name: "Giant Ornament", imageName: "test.png" },
-    { name: "Disney Character", imageName: "test.png" },
-    { name: "Moving Display", imageName: "test.png" },
-    { name: "Stocking", imageName: "test.png" },
-    { name: "Peace Sign", imageName: "test.png" },
-    { name: "Workshop Scene", imageName: "test.png" },
-    { name: "Candy Pieces", imageName: "test.png" },
-    { name: "Santa in Chimney", imageName: "test.png" },
-    { name: "Snowflake", imageName: "test.png" },
-    { name: "Flying Angel", imageName: "test.png" },
-    { name: "Countdown Display", imageName: "test.png" },
-    { name: "Musical Lights", imageName: "test.png" },
-    { name: "Inflatable", imageName: "test.png" },
-    { name: "Christmas Tree", imageName: "test.png" },
-    { name: "Projected Lights", imageName: "test.png" },
-    { name: "Regular Reindeer", imageName: "test.png" }
+    { name: "Candy Cane", imageName: "candy-cane.png" },
+    { name: "Star", imageName: "star.png" },
+    { name: "Rudolph", imageName: "rudolph.png" },
+    { name: "Polar Bear", imageName: "polarbear.png" },
+    { name: "Wreath", imageName: "wreath.png" },
+    { name: "Penguin", imageName: "penguin.png" },
+    { name: "Sleigh", imageName: "sleigh.png" },
+    { name: "Icicle Lights", imageName: "icicle-lights.png" },
+    { name: "Santa Claus", imageName: "santa-claus.png" },
+    { name: "Snowman", imageName: "snowman.png" },
+    { name: "Grinch", imageName: "grinch.jpeg" },
+    { name: "Train", imageName: "train.png" },
+    { name: "Angel", imageName: "angel.png" },
+    { name: "Gingerbread Man", imageName: "gingerbread-man.png" },
+    { name: "Snow Globe", imageName: "snow-globe.png" },
+    { name: "Mrs. Claus", imageName: "mrs-claus.png" },
+    { name: "Elf", imageName: "elf.png" },
+    { name: "Toy Soldier", imageName: "toy-soldier.png" },
+    { name: "Nativity Scene", imageName: "nativity.png" },
+    { name: "Present Box", imageName: "present.png" },
+    //{ name: "White Lights", imageName: "white-lights.png" },
+    //{ name: "Colorful Lights", imageName: "colored-lights.png" },
+    { name: "North Pole Sign", imageName: "north-pole.png" },
+    { name: "Bell", imageName: "bell.png" },
+    { name: "Giant Ornament", imageName: "ornament.png" },
+    { name: "Workshop Scene", imageName: "workshop.png" },
+    { name: "Candy Pieces", imageName: "candy.png" },
+    { name: "Snowflake", imageName: "snowflake.png" },
+    { name: "Musical Lights", imageName: "music-lights.png" },
+    { name: "Christmas Tree", imageName: "christmas-tree.png" },
+    { name: "Projected Lights", imageName: "projected-lights.png" },
+    { name: "Regular Reindeer", imageName: "reindeer.jpg" }
   ].map(item => ({ src: `/${item.imageName}`, name: item.name })).sort(() => Math.random() - 0.5);
 ---
-<div class="max-w-4xl mx-auto p-4">
-  <div class="grid grid-cols-5 gap-4">
+<div class="max-w-4xl mx-auto p-3">
+  <div class="grid grid-cols-5 gap-3">
     {items.map((item, index) => {
       return (
         <div class="border border-gray-300 rounded-lg p-2 flex flex-col items-center text-center">
-          <img src={item.src} alt={item.name} width={100} height={100}/>
+          <img src={item.src} alt={item.name} width={110} height={110}/>
           <p class="text-sm font-medium">{item.name}</p>
         </div>
       );
